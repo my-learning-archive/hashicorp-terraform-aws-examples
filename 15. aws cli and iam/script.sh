@@ -49,7 +49,7 @@ aws iam attach-group-policy \
 	--policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess
 
 # Review IAM configuration
-# Note: listing the attached user policies of 'example-user-developer' returns an empty list
+# Note: listing the attached user policies of 'example-user-developer' returns an empty list.
 #       this is because the policies are enforced indirectly through the group the user belongs to.
 #       but the purpose of this exercise is to create an example before addressing it with terraform.
 aws iam list-users
