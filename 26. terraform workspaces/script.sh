@@ -39,9 +39,11 @@ terraform show
 tree ./terraform.tfstate.d/
 
 # Destroy terraform resources in workspace 'workspaceA'
-# Note: the 'local_file.example_file' resource in workspaceA will not be deleted
-#       because this file was overriden by the one with the same name in workspaceB.
-#       this example purposefully ilustrates this peculiarity of terraform workspaces.
+# Note: the 'local_file.example_file_1' resource in workspaceA will not be deleted
+#       because this file was overriden by the homologous resource in workspaceB.
+#       this example purposefully ilustrates this peculiarity of terraform workspaces:
+#       in some cases, resources can be overriden across workspaces, and mitigation might be required.
+#       e.g., 'local_file.example-file_2' mitigates this.
 terraform workspace select "workspaceA"
 terraform destroy
 terraform workspace select "workspaceB"
