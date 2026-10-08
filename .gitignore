@@ -12,7 +12,7 @@ crash.*.log
 # .terraform directories
 **/.terraform/*
 
-# .tfstate files from all directories
+# .tfstate files
 **/*.tfstate
 **/*.tfstate.*
 
